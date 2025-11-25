@@ -1,0 +1,51 @@
+@import '~/styles/typography.scss';
+@import '~/styles/fonts.css';
+@import '~/styles/custom-scrollbar.scss';
+@import '~/styles/buttons.scss';
+@import '~/styles/cards.scss';
+@import '~/components/FeaturedWorks/splide.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #fff;
+
+  --color-blue-light: #0395e9 ;
+  --color-blue-dark: #00629b;
+  --color-blue-hover-light: #017cbe;
+  --color-blue-hover-dark: #014c77;
+
+  --color-blue-text-light: #00aaff;
+  --color-blue-text-dark:rgb(0, 117, 213);
+
+  --color-extra-light-blue:#BFDBFE; 
+
+  --color-gray-light: #393939;
+  --color-gray-extra-light: #868686;
+
+  --color-glass: rgba(59, 130, 246, 0.1);
+  --color-card-icon-bg: rgba(255, 255, 255, 0.05);
+  --color-card-icon-border: rgba(255, 255, 255, 0.1);
+  --color-card-icon-bg-hover: rgba(59, 130, 246, 0.2);
+  --color-card-icon-border-hover: rgba(59, 130, 246, 0.3);
+
+  --color-border-light: #FFFFFF1A;
+  --color-border-dark: #FFFFFF33;
+
+
+  --color-gray: #0e0e10;
+  --color-card-bg: rgba(24, 24, 27, 0.5);
+}
+
+.light {
+  --color-primary: #000;
+  --color-green-light: #3DDC84;
+  --color-green-dark: #2E7D32;
+  --color-gray-bg: #f5f5f5;
+}
+
+body {
+  color: white;
+}

@@ -1,0 +1,135 @@
+.blue-btn {
+  background: linear-gradient(
+    180deg,
+    var(--color-blue-light) 0%,
+    var(--color-blue-dark) 100%
+  );
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+
+  &:hover {
+    transform: scale(0.97);
+    background: linear-gradient(
+      180deg,
+      var(--color-blue-hover-light) 0%,
+      var(--color-blue-hover-dark) 100%
+    );
+  }
+}
+
+.glass-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+
+  background: var(--color-card-icon-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-glass);
+  border-radius: 50px;
+
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  &:hover {
+    background: var(--color-card-icon-border);
+    border-color: var(--color-blue-light,);
+    box-shadow:
+      0 0 20px var(--color-card-icon-border-hover),
+      inset 0 0 10px var(--color-glas);
+    transform: translateY(-2px);
+  }
+}
+
+.glass-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.glass-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.glass-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-card-icon-border),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.glass-btn:hover::before {
+  left: 100%;
+}
+
+.splide__arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-card-icon-border),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.splide__arrow:hover::before {
+  left: 100%;
+}
+
+.splide__arrow {
+  background: var(--color-card-icon-bg) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid var(--color-card-icon-border) !important;
+
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+
+  opacity: 1 !important;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 20;
+}
+
+.splide__arrow svg {
+  fill: var(--color-primary) !important;
+  width: 0.8 !important;
+  height: 0.8rem !important;
+  transition: fill 0.3s ease;
+}
+
+.splide__arrow:hover {
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.splide__arrow--prev {
+  left: -4.5rem !important;
+}
+
+.splide__arrow--next {
+  right: -4.5rem !important;
+}
