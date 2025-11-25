@@ -12,7 +12,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="flex justify-between">
-        <h3 className="subtitle text-hover">{question}</h3>
+        <h3 className="subtitle transition-colors duration-300 group-hover:text-[var(--color-extra-light-blue)]">{question}</h3>
         <button className="relative w-12 h-12 flex items-center justify-center group">
           <span className="absolute w-[16px] h-[2px] bg-[var(--color-primary)] rounded transition-all duration-300"></span>
           <span className="absolute w-[2px] h-[16px] bg-[var(--color-primary)] rounded transition-all duration-300 group-hover:rotate-90 origin-center"></span>
