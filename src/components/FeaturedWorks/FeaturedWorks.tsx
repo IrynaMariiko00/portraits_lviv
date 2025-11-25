@@ -19,7 +19,7 @@ const FeaturedWorks = () => {
         transition={{ duration: 0.8 }}
         className="title"
       >
-        Featured Works
+        Featured <span className="text-blue">Works</span>
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 40 }}

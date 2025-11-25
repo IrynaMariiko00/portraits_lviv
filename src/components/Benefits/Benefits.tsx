@@ -31,7 +31,7 @@ const Benefits = () => {
               </div>
 
               <div className="relative z-10">
-                <h3 className="text mb-2">{benefit.title}</h3>
+                <h3 className="text mb-2 text-hover">{benefit.title}</h3>
                 <p className="text text-[var(--color-gray-extra-light)]">
                   {benefit.description}
                 </p>

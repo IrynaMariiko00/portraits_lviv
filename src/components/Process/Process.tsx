@@ -26,8 +26,8 @@ const Process = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="flex items-center gap-4 group"
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-blue-hover-dark)] text-[var(--color-blue-light)] group-hover:bg-[var(--color-blue-hover-light)] group-hover:text-white transition-all duration-300">
-                  <CheckIcon className="w-4 h-4 transform transition-transform duration-300 scale-110" />
+                <div className="glass-icon">
+                  <CheckIcon className="w-[20px] h-[20px]"/>
                 </div>
 
                 <motion.div
@@ -43,7 +43,7 @@ const Process = () => {
             ))}
           </ul>
 
-          <button className="blue-btn h-[50px] w-[175px]">ORDER YOURS</button>
+          <button className="blue-btn h-[auto] w-[200px]">ORDER YOURS</button>
         </div>
 
         <div className="relative w-full max-w-[300px] mr-[15%]">

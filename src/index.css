@@ -12,10 +12,10 @@
 :root {
   --color-primary: #fff;
 
-  --color-blue-light: #0395e9 ;
-  --color-blue-dark: #00629b;
-  --color-blue-hover-light: #017cbe;
-  --color-blue-hover-dark: #014c77;
+  --color-blue-light: #00b7ff;
+  --color-blue-dark: #0076bb;
+  --color-blue-hover-light: #0298c9;
+  --color-blue-hover-dark: #006fb0;
 
   --color-blue-text-light: #00aaff;
   --color-blue-text-dark:rgb(0, 117, 213);
@@ -26,14 +26,16 @@
   --color-gray-extra-light: #868686;
 
   --color-glass: rgba(59, 130, 246, 0.1);
-  --color-card-icon-bg: rgba(255, 255, 255, 0.05);
-  --color-card-icon-border: rgba(255, 255, 255, 0.1);
-  --color-card-icon-bg-hover: rgba(59, 130, 246, 0.2);
-  --color-card-icon-border-hover: rgba(59, 130, 246, 0.3);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-glass-bg-hover: rgba(59, 130, 246, 0.2);
+  --color-border-hover: rgba(59, 130, 246, 0.3);
 
   --color-border-light: #FFFFFF1A;
   --color-border-dark: #FFFFFF33;
 
+  --color-btn-shadow: rgba(0, 0, 0, 0.3);
+  --color-btn-highlight: rgba(255, 255, 255, 0.3);
 
   --color-gray: #0e0e10;
   --color-card-bg: rgba(24, 24, 27, 0.5);

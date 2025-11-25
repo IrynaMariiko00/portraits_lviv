@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <div className="max-w-screen-xl mx-auto py-[92px] flex flex-col gap-[156px]">
+      <div className="max-w-screen-xl mx-auto py-[92px] flex flex-col gap-[166px]">
         <Benefits />
         <FeaturedWorks />
         <FeaturedQuestions />
