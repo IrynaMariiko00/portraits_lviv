@@ -32,9 +32,7 @@ const Benefits = () => {
 
               <div className="relative z-10">
                 <h3 className="text card-title mb-2">{benefit.title}</h3>
-                <p className="text text-[var(--color-gray-extra-light)]">
-                  {benefit.description}
-                </p>
+                <p className="text text-gray">{benefit.description}</p>
               </div>
             </motion.div>
           ))}

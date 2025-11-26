@@ -9,6 +9,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+  overflow-x: hidden;
+}
+
 :root {
   --color-primary: #fff;
 
@@ -16,6 +20,7 @@
   --color-blue-dark: #0076bb;
   --color-blue-hover-light: #0298c9;
   --color-blue-hover-dark: #006fb0;
+  --color-purple: #8e44ad;
 
   --color-blue-text-light: #00aaff;
   --color-blue-text-dark:rgb(0, 117, 213);
@@ -39,6 +44,7 @@
 
   --color-gray: #0e0e10;
   --color-card-bg: rgba(24, 24, 27, 0.5);
+  --color-text-shadow-dark: 0_0_20px_rgba(0,0,0,0.9);
 }
 
 .light {

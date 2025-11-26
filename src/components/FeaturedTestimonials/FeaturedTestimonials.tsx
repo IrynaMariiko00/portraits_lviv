@@ -15,7 +15,7 @@ const FeaturedTestimonials = () => {
           >
             What <span className="text-blue">My Clients</span> Say
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,17 +27,16 @@ const FeaturedTestimonials = () => {
             felt when they saw their stories brought to paper.
           </motion.p>
 
-          <motion.button 
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="glass-btn w-fit"
           >
-              See All <span className="arrow">→</span>
+            See All <span className="arrow">→</span>
           </motion.button>
         </div>
 
         <div className="relative h-[500px] w-full md:w-[500px] flex-shrink-0">
-          
           <div className="flex flex-col gap-[15px] h-full overflow-y-auto no-scrollbar ">
             {featuredTestimonials.map((item, index) => (
               <motion.div
@@ -51,16 +50,14 @@ const FeaturedTestimonials = () => {
                 <img
                   src={item}
                   alt={`Testimonial ${index + 1}`}
-                   className="max-w-full max-h-full rounded-lg object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  className="max-w-full max-h-full rounded-lg object-contain opacity-90 hover:opacity-100 transition-opacity"
                 />
 
                 <div className="hover-glow" />
               </motion.div>
             ))}
           </div>
-
         </div>
-
       </div>
     </section>
   );

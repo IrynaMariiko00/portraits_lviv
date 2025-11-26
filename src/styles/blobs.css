@@ -1,0 +1,51 @@
+
+.philosophy-section {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-gray) 20%,
+    var(--color-gray) 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-gray) 50%,
+    var(--color-gray) 50%,
+    transparent 100%
+  );
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: moveBlob 15s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-blue-light);
+  top: 10%;
+  left: 20%;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-purple);
+  bottom: 10%;
+  right: 20%;
+  animation-delay: -7s;
+}
+
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(60px, -60px) scale(1.1);
+  }
+}
