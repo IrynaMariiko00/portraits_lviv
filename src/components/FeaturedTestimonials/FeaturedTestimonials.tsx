@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const FeaturedTestimonials = () => {
   return (
-    <section className="relative w-full py-20 overflow-hidden">
+    <section className="relative w-full overflow-hidden">
       <div className="container mx-auto px-4 md:px-10 flex flex-col md:flex-row justify-between gap-10 items-center">
         <div className="flex flex-col max-w-lg z-10">
           <motion.h1

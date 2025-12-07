@@ -10,6 +10,8 @@ const TextSection: React.FC<TextSectionProps> = ({ title, description }) => {
       </div>
 
       <div className="relative w-full max-w-screen-lg mx-auto z-10">
+
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-black/40 blur-3xl -z-10 rounded-full pointer-events-none"></div>
         <h1 className="title">
           {title.map((part, idx) => (
             <span key={idx} className={part.className}>

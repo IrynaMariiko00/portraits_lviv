@@ -10,8 +10,8 @@
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    var(--color-gray) 50%,
-    var(--color-gray) 50%,
+    var(--color-gray) 20%,
+    var(--color-gray) 80%,
     transparent 100%
   );
 }

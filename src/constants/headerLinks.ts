@@ -1,8 +1,8 @@
-export const headerLinks = [
-  { name: "Home", link: "/" },
-  { name: "About Me", link: "/about" },
-  { name: "Portfolio", link: "/portfolio" },
-  { name: "Testimonials", link: "/testimonials" },
-  { name: "Price", link: "/price" },
-  { name: "FAQ", link: "/faq" },
+export const quickLinks = [
+  { title: "Home", link: "/" },
+  { title: "About Me", link: "/about" },
+  { title: "Portfolio", link: "/portfolio" },
+  { title: "Testimonials", link: "/testimonials" },
+  { title: "Price", link: "/price" },
+  { title: "FAQ", link: "/faq" },
 ];

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { headerLinks } from "~/constants/headerLinks";
+import { quickLinks } from "~/constants/headerLinks";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,19 +18,19 @@ const Header = () => {
   return (
     <header
       className={`h-20 w-full fixed z-20 ${
-        isScrolled ? "bg-gray border-b border-grayLight" : "bg-transparent"
+        isScrolled ? "bg-gray border-b border-[var(--color-gray-light)]" : "bg-transparent"
       }`}
     >
       <div className="max-w-screen-xl mx-auto flex items-center h-full justify-between">
-        <Link to="/" className="small-bold">
+        <Link to="/" className="small-bold  drop-shadow-[1px_1px_10px_var(--color-blue-dark)]">
           PortraitsLviv
         </Link>
 
         <nav>
           <ul className="flex gap-[57px] small-bold">
-            {headerLinks.map((item) => (
+            {quickLinks.map((item) => (
               <NavLink key={item.link} to={item.link} className="nav-link">
-                {item.name}
+                {item.title}
               </NavLink>
             ))}
           </ul>

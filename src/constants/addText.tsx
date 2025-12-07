@@ -41,3 +41,17 @@ export const emotions = {
   description:
     "From subtle expressions to the tiniest gestures, I capture the little things that make you who you are. These details turn a simple portrait into a personal story",
 };
+
+export const contactMeHomePage = {
+  title: [
+    { text: "Have a", className: "" },
+    {
+      text: "unique",
+      className: blueShadowClass,
+    },
+    { text: "idea?",
+      className: "",
+    },
+    ],
+    description: "  Not sure which photo to choose or have questions about the process? Let's discuss your perfect portrait" 
+  }
