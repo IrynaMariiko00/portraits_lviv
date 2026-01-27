@@ -1,4 +1,6 @@
-import { ABOUT_ME_CONTENT } from "../../constants/aboutMe";
+import { ABOUT_ME_CONTENT } from "~/constants/aboutMe";
+import mePhoto from "~/assets/images/aboutMe/me.png";
+import { Reveal } from "~/components/ui/Reveal";
 
 const AboutMePage = () => {
   const {
@@ -12,54 +14,77 @@ const AboutMePage = () => {
   } = ABOUT_ME_CONTENT;
 
   return (
-    <main className="py-[130px]">
+    <main className="py-[130px] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-16 text-center lg:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+        <Reveal
+          direction="down"
+          duration={0.8}
+          className="mb-16 text-center lg:text-left"
+        >
+          <h1 className="title">
             {TITLE} <span className="text-blue">{TITLE_ACCENT}</span>
           </h1>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative group">
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-              <img
-                src="/images/aboutMe/me.png"
-                alt="Iryna - Portrait Artist"
-                className="w-full h-auto object-cover transform hover:scale-105 transition duration-700"
-              />
+          <Reveal direction="right" delay={0.2} duration={0.8}>
+            <div className="relative group">
+              <div className="glass-border-card overflow-hidden rounded-2xl">
+                <img
+                  src={mePhoto}
+                  alt="Iryna - Portrait Artist"
+                  className="zoom-image transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="card-overlay" />
+              </div>
+
+              <div className="absolute -z-10 -bottom-6 -left-6 w-32 h-32 bg-blue/20 blur-3xl rounded-full" />
             </div>
-          </div>
+          </Reveal>
 
-          <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
-            <h3 className="text-3xl font-semibold text-white">
-              {GREETING} <span className="text-blue">{NAME}</span>
-            </h3>
+          <div className="space-y-6 leading-relaxed">
+            <Reveal direction="up" delay={0.3}>
+              <h3 className="big-bold">
+                {GREETING} <span className="text-blue">{NAME}</span>
+              </h3>
+            </Reveal>
 
-            <p>
-              {PARAGRAPHS.ONE.BEFORE}
-              <span className="text-white font-medium">
-                {PARAGRAPHS.ONE.HIGHLIGHT}
-              </span>
-              {PARAGRAPHS.ONE.AFTER}
-            </p>
-
-            <p>
-              {PARAGRAPHS.TWO.MAIN}{" "}
-              <span className="italic text-white">{PARAGRAPHS.TWO.ITALIC}</span>
-            </p>
-
-            <p>{PARAGRAPHS.THREE}</p>
-
-            <div className="bg-white/5 border-l-4 border-blue p-6 mt-8 rounded-r-lg">
-              <p className="text-white font-medium italic">"{QUOTE}"</p>
+            <div className="space-y-4">
+              {PARAGRAPHS.map((paragraph, index) => (
+                <Reveal key={index} direction="up" delay={0.4 + index * 0.15}>
+                  <p className="text">
+                    {paragraph.text}
+                    {paragraph.highlight && (
+                      <span className="text-blue font-medium">
+                        {" "}
+                        {paragraph.highlight}
+                      </span>
+                    )}
+                    {paragraph.after && <span> {paragraph.after}</span>}
+                    {paragraph.italic && (
+                      <span className="italic text text-gray block mt-2">
+                        {paragraph.italic}
+                      </span>
+                    )}
+                  </p>
+                </Reveal>
+              ))}
             </div>
 
-            <div className="pt-8 self-end">
-              <a href="/#contact" className="blue-btn w-[37%]">
+            <Reveal direction="left" delay={0.8} duration={0.8}>
+              <div className="bg-white/5 border-l-4 border-blue p-6 mt-8 rounded-r-lg backdrop-blur-sm">
+                <p className="text italic text-lg text-white/90">"{QUOTE}"</p>
+              </div>
+            </Reveal>
+
+            <Reveal direction="up" delay={1} className="pt-8">
+              <a
+                href="/#contact"
+                className="blue-btn inline-block text-center min-w-[200px]"
+              >
                 {BUTTON_TEXT}
               </a>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>

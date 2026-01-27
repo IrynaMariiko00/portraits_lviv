@@ -46,10 +46,10 @@
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 50px;
-  border: 1px solid var(--color-border); 
+  border: 1px solid var(--color-border);
   padding: 14px 32px;
-  
-  box-shadow: 
+
+  box-shadow:
     0 4px 15px var(--color-btn-shadow),
     inset 0 1px 0 var(--color-btn-highlight);
 
@@ -67,7 +67,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.4),
+      var(--color-glass-btn-bg),
       transparent
     );
     transition: left 0.5s ease;
@@ -76,10 +76,10 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
       0 0 30px var(--color-blue-hover-dark),
-      inset 0 0 20px rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+      inset 0 0 20px var(--color-glass-btn-shadow);
+    border-color: var(--color-glass-bg-border-hover);
 
     &::before {
       left: 100%;
@@ -101,12 +101,12 @@
   gap: 10px;
   padding: 12px 28px;
   border-radius: 50px;
-  
+
   color: var(--color-primary);
-  text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.5px;
-  
+  text-decoration: none;
+
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   .arrow {
@@ -123,10 +123,14 @@
       0 0 20px var(--color-border-hover),
       inset 0 0 10px var(--color-glass);
     transform: translateY(-2px);
+  }
 
-    .arrow {
-      transform: translateX(5px);
-    }
+  &.arrow-right:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  &.arrow-left:hover .arrow {
+    transform: translateX(-5px);
   }
 }
 
@@ -141,12 +145,14 @@
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
-  
+
   color: var(--color-primary);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 
-  svg, span, i {
+  svg,
+  span,
+  i {
     position: relative;
     z-index: 2;
   }
@@ -167,15 +173,15 @@
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px) !important;
   border: 1px solid var(--color-border) !important;
-  
+
   width: 2.5rem !important;
   height: 2.5rem !important;
-  
+
   opacity: 1 !important;
-  overflow: hidden; 
+  overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 20;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -197,7 +203,7 @@
     position: relative;
     z-index: 2;
     fill: var(--color-primary) !important;
-    width: 0.8rem !important; 
+    width: 0.8rem !important;
     height: 0.8rem !important;
     transition: fill 0.3s ease;
   }

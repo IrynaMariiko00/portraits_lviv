@@ -49,9 +49,8 @@ export const contactMeHomePage = {
       text: "unique",
       className: blueShadowClass,
     },
-    { text: "idea?",
-      className: "",
-    },
-    ],
-    description: "  Not sure which photo to choose or have questions about the process? Let's discuss your perfect portrait" 
-  }
+    { text: "idea?", className: "" },
+  ],
+  description:
+    "  Not sure which photo to choose or have questions about the process? Let's discuss your perfect portrait",
+};

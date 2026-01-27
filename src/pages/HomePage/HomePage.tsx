@@ -8,6 +8,7 @@ import TextSection from "~/components/TextSection/TextSection";
 import { contactMeHomePage, emotions, myPhilosophy } from "~/constants/addText";
 import ContactMeLink from "~/components/ContactMeLink/ContactMeLink";
 import ContactMe from "~/components/ContactMe/ContactMe";
+import Comparison from "~/components/Comparison/Comparison";
 
 const HomePage = () => {
   return (
@@ -20,14 +21,18 @@ const HomePage = () => {
           description={emotions.description}
         />
         <FeaturedWorks />
-        <ContactMeLink title={contactMeHomePage.title} description={contactMeHomePage.description} />
+        <ContactMeLink
+          title={contactMeHomePage.title}
+          description={contactMeHomePage.description}
+        />
         <FeaturedTestimonials />
         <TextSection
           title={myPhilosophy.title}
           description={myPhilosophy.description}
         />
+        <Comparison />
         <Process />
-        <FeaturedQuestions /> 
+        <FeaturedQuestions />
         <ContactMe />
       </div>
     </>

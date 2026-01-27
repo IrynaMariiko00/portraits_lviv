@@ -1,6 +1,6 @@
 import CheckIcon from "~/assets/icons/CheckIcon";
-import { motion } from "framer-motion";
 import { smallBenefits } from "~/constants/benefits";
+import { Reveal } from "../ui/Reveal";
 
 const Process = () => {
   return (
@@ -18,35 +18,26 @@ const Process = () => {
 
           <ul className="space-y-5 my-10">
             {smallBenefits.map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="flex items-center gap-4 group"
-              >
+              <Reveal key={index} direction="right" delay={index * 0.15}>
                 <div className="glass-icon">
-                  <CheckIcon className="w-[20px] h-[20px]"/>
+                  <CheckIcon className="w-[20px] h-[20px]" />
                 </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
-                  className="text"
-                >
-                  {item}
-                </motion.div>
-              </motion.li>
+                <span className="text">{item}</span>
+              </Reveal>
             ))}
           </ul>
 
-          <button className="blue-btn h-[auto] w-[200px]">ORDER YOURS</button>
+          <Reveal direction="up" delay={0.6}>
+            <button className="blue-btn h-[auto] w-[200px]">ORDER YOURS</button>
+          </Reveal>
         </div>
 
-        <div className="relative w-full max-w-[300px] mr-[15%]">
+        <Reveal
+          direction="left"
+          delay={0.4}
+          className="relative w-full max-w-[300px] mr-[15%]"
+        >
           <div className="rounded-2xl overflow-hidden">
             <div className="w-full aspect-[9/16]">
               <iframe
@@ -58,7 +49,7 @@ const Process = () => {
               ></iframe>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

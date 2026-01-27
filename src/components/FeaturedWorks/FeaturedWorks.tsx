@@ -2,30 +2,26 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import type { Splide as SplideInstance } from "@splidejs/splide";
 import "~/index.css";
 import "@splidejs/react-splide/css";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { featuredImages } from "~/constants/featuredImages";
 import { Link } from "react-router-dom";
+import { Reveal } from "../ui/Reveal";
+import { ArrowRight } from "lucide-react";
 
 const FeaturedWorks = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <section className="flex flex-col justify-center mx-[auto]">
-      <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-        className="title"
-      >
-        Featured <span className="text-blue">Works</span>
-      </motion.h1>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+      <Reveal direction="up" duration={0.8}>
+        <h1 className="title">
+          Featured <span className="text-blue">Works</span>
+        </h1>
+      </Reveal>
+      <Reveal
+        direction="up"
+        delay={0.2}
+        duration={0.8}
         className="flex items-center justify-between"
       >
         <div className="flex flex-col gap-[8px] mb-[48px]">
@@ -37,11 +33,11 @@ const FeaturedWorks = () => {
             clients.
           </p>
         </div>
-        <Link to="/" className="glass-btn group">
+        <Link to="/" className="glass-btn group arrow-right">
           View Full Gallery
-          <span className="arrow">→</span>
+          <ArrowRight className="arrow" size={18} />
         </Link>
-      </motion.div>
+      </Reveal>
       <Splide
         className="relative overflow-visible max-w-[1100px] mx-auto"
         options={{
@@ -70,6 +66,7 @@ const FeaturedWorks = () => {
                 alt={`Image ${i + 1}`}
                 className="w-96 h-[496px] object-cover rounded-xl"
               />
+              <div className="card-overlay" />
             </SplideSlide>
           );
         })}
