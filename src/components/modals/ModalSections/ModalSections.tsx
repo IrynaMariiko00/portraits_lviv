@@ -1,0 +1,20 @@
+import type { Section } from "~/types/modals";
+
+const ModalSections = ({ items }: { items: Section[] }) => (
+  <div className="space-y-8">
+    {items.map((item, index) => (
+      <div key={index} className="flex flex-col gap-3">
+        {item.label && (
+          <h3 className="text-[var(--color-extra-light-blue)] font-bold text-lg uppercase opacity-90 border-b border-white/10 pb-1 w-fit">
+            {item.label}
+          </h3>
+        )}
+        <p className="text-white/80 leading-relaxed whitespace-pre-line text-base font-light">
+          {item.text}
+        </p>
+      </div>
+    ))}
+  </div>
+);
+
+export default ModalSections;

@@ -1,10 +1,15 @@
 import { create } from "zustand";
 
+interface ModalSection {
+  label?: string;
+  text: string;
+}
+
 interface ModalData {
   title: string;
   description?: string;
-  type?: 'payment' | 'timeline' | 'collaboration' | 'final';
-  payload?: any; 
+  type?: "payment" | "timeline" | "info";
+  payload?: ModalSection[];
 }
 
 interface ModalState {

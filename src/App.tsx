@@ -8,7 +8,7 @@ import TestimonialsPage from "./pages/TestimonialsPage/TestimonialsPage";
 import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 import PortraitPage from "./pages/PortraitPage/PortraitPage";
 import PricePage from "./pages/PricePage/PricePage";
-import Modal from "./components/Modal/Modal";
+import { GlobalModal } from "./components/modals/GlobalModal/GlobalModal";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
       </Routes>
       <Footer />
 
-      <Modal />
+      <GlobalModal />
     </main>
   );
 }
