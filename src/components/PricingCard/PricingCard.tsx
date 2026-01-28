@@ -1,3 +1,4 @@
+import { PRICING_DETAILS } from "~/constants/pricingDetails";
 import { useModalStore } from "~/store/useModalsStore";
 import type { PricingCardProps } from "~/types/pricing";
 
@@ -5,11 +6,17 @@ const PricingCard = ({
   group: { size, dimensions, description, items, isPopular },
 }: PricingCardProps) => {
   const openModal = useModalStore((state) => state.openModal);
+  
   const handleDetails = () => {
-    console.log("Клік був");
     openModal({
-      title: "details",
-      description: "test testtesttesttest test test testtest test",
+      title: PRICING_DETAILS.title,
+      type: 'payment', 
+      payload: [
+        PRICING_DETAILS.payment,
+        PRICING_DETAILS.timeline("2–3 weeks"),
+        PRICING_DETAILS.collaboration,
+        PRICING_DETAILS.final
+      ]
     });
   };
 

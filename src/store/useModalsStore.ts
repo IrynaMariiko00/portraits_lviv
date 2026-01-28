@@ -2,7 +2,9 @@ import { create } from "zustand";
 
 interface ModalData {
   title: string;
-  description: string;
+  description?: string;
+  type?: 'payment' | 'timeline' | 'collaboration' | 'final';
+  payload?: any; 
 }
 
 interface ModalState {
