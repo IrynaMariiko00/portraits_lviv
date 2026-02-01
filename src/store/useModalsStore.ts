@@ -1,15 +1,9 @@
 import { create } from "zustand";
+import type { Section } from "~/types/modals";
 
-interface ModalSection {
-  label?: string;
-  text: string;
-}
-
-interface ModalData {
+export interface ModalData {
   title: string;
-  description?: string;
-  type?: "payment" | "timeline" | "info";
-  payload?: ModalSection[];
+  sections: Section[]; 
 }
 
 interface ModalState {

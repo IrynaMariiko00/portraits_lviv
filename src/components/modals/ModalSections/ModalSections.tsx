@@ -1,3 +1,4 @@
+import ProcessStepper from "~/components/ui/ProcessStepper/ProcessStepper";
 import type { Section } from "~/types/modals";
 
 const ModalSections = ({ items }: { items: Section[] }) => (
@@ -9,9 +10,14 @@ const ModalSections = ({ items }: { items: Section[] }) => (
             {item.label}
           </h3>
         )}
-        <p className="text-white/80 leading-relaxed whitespace-pre-line text-base font-light">
-          {item.text}
-        </p>
+
+        {item.type === "stepper" && item.steps ? (
+          <ProcessStepper steps={item.steps} />
+        ) : (
+          <p className="text-white/80 leading-relaxed whitespace-pre-line text-base font-light">
+            {item.text}
+          </p>
+        )}
       </div>
     ))}
   </div>

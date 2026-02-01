@@ -9,13 +9,9 @@ export const GlobalModal = () => {
 
   return (
     <BaseModal isOpen={isOpen} onClose={closeModal} title={data.title}>
-      {data.type === "payment" && Array.isArray(data.payload) && (
-        <ModalSections items={data.payload} />
-      )}
-
-      {!data.type && data.description && (
-        <p className="text-white text-center opacity-80">{data.description}</p>
-      )}
+      <ModalSections items={data.sections} />
     </BaseModal>
   );
 };
+
+export default GlobalModal;

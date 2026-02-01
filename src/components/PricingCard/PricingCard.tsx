@@ -10,13 +10,7 @@ const PricingCard = ({
   const handleDetails = () => {
     openModal({
       title: PRICING_DETAILS.title,
-      type: 'payment', 
-      payload: [
-        PRICING_DETAILS.payment,
-        PRICING_DETAILS.timeline("2–3 weeks"),
-        PRICING_DETAILS.collaboration,
-        PRICING_DETAILS.final
-      ]
+      sections: PRICING_DETAILS.sections
     });
   };
 

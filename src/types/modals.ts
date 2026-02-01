@@ -4,6 +4,7 @@ export interface Section {
   type?: "stepper";
   steps?: string[];
 }
+
 export interface BaseModalProps {
   isOpen: boolean;
   onClose: () => void;

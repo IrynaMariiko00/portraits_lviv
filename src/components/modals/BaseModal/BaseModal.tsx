@@ -1,7 +1,24 @@
+import { useEffect } from "react";
 import CloseIcon from "~/assets/icons/CloseIcon";
 import type { BaseModalProps } from "~/types/modals";
 
 const BaseModal = ({ isOpen, onClose, title, children }: BaseModalProps) => {
+  if (!isOpen) return null;
+
+  useEffect(() => {
+    const html = document.documentElement;
+
+    if (isOpen) {
+      html.style.overflow = "hidden";
+    } else {
+      html.style.overflow = "";
+    }
+
+    return () => {
+      html.style.overflow = "";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
