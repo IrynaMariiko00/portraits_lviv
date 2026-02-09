@@ -1,6 +1,7 @@
 import { featuredTestimonials } from "~/constants/featuredTestimonials";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "~/components/ui/Reveal";
+import { Link } from "react-router-dom";
 
 const FeaturedTestimonials = () => {
   return (
@@ -21,10 +22,10 @@ const FeaturedTestimonials = () => {
           </Reveal>
 
           <Reveal direction="up" delay={0.4}>
-            <button className="glass-btn w-fit arrow-right">
+            <Link to="/testimonials" className="glass-btn w-fit arrow-right">
               See All
               <ArrowRight className="arrow" size={18} />
-            </button>
+            </Link>
           </Reveal>
         </div>
 

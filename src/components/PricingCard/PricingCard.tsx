@@ -6,18 +6,18 @@ const PricingCard = ({
   group: { size, dimensions, description, items, isPopular },
 }: PricingCardProps) => {
   const openModal = useModalStore((state) => state.openModal);
-  
+
   const handleDetails = () => {
     openModal({
       title: PRICING_DETAILS.title,
-      sections: PRICING_DETAILS.sections
+      sections: PRICING_DETAILS.sections,
     });
   };
 
   return (
     <div className="group relative h-full">
       <div
-        className={`glass-card bg-[var(--color-glass-bg)] p-12 pb-16 h-full flex flex-col ${isPopular ? "shadow-[0_0_15px_var(--color-blue-hover-dark),inset_0_0_20px_var(--color-glass-btn-shadow)] border-[var(--color-blue-hover-dark)] hover:border-[var(--color-blue-hover-dark)]" : ""}`}
+        className={`glass-card bg-[var(--color-glass-bg)] p-12 pb-0 h-full flex flex-col ${isPopular ? "shadow-[0_0_15px_var(--color-blue-hover-dark),inset_0_0_20px_var(--color-glass-btn-shadow)] border-[var(--color-blue-hover-dark)] hover:border-[var(--color-blue-hover-dark)]" : ""}`}
       >
         {isPopular && (
           <div className="absolute top-0 right-0 bg-[var(--color-blue-dark)] px-2 rounded-bl-xl">
@@ -33,7 +33,7 @@ const PricingCard = ({
           {description}
         </p>
 
-        <div className="space-y-8 relative flex-1 flex flex-col justify-start">
+        <div className="space-y-8 relative flex-1 pb-16 flex flex-col justify-start">
           {items.map((item, i) => (
             <div key={i} className="flex items-baseline gap-4 group/item">
               <span className="text font-light">{item.label}</span>
@@ -44,8 +44,15 @@ const PricingCard = ({
             </div>
           ))}
         </div>
+        <div className="group relative">
+          <button
+            className="underline font-extralight text text-gray Shipping is calculated separately (approx. $ absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-[20%] transition-all opacity-0 first-line:duration-700 group-hover:opacity-100 group-hover:translate-y-0"
+            onClick={handleDetails}
+          >
+            More details
+          </button>
+        </div>
       </div>
-      <button onClick={handleDetails}>More details</button>
     </div>
   );
 };

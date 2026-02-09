@@ -33,7 +33,7 @@ const FeaturedWorks = () => {
             clients.
           </p>
         </div>
-        <Link to="/" className="glass-btn group arrow-right">
+        <Link to="/portfolio" className="glass-btn group arrow-right">
           View Full Gallery
           <ArrowRight className="arrow" size={18} />
         </Link>

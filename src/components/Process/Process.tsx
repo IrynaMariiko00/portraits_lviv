@@ -23,7 +23,7 @@ const Process = () => {
                   <CheckIcon className="w-[20px] h-[20px]" />
                 </div>
 
-                <span className="text">{item}</span>
+                <span className="inline-block pl-4 text">{item}</span>
               </Reveal>
             ))}
           </ul>

@@ -27,13 +27,12 @@ const PricePage = () => {
             </Reveal>
           ))}
         </div>
-        {/* Блок з інформацією про доставку */}
         <Reveal direction="up" delay={0.5}>
           <div className="mt-24 max-w-2xl mx-auto text-center p-8 rounded-3xl bg-white/[0.01] border border-white/5 backdrop-blur-md">
             <p className="text-gray/50 text-xs uppercase tracking-[0.3em] mb-4">
               Terms & Delivery
             </p>
-            <p className="text-gray/80 text-sm italic leading-relaxed">
+            <p className="italic font-thin">
               Shipping is calculated separately (approx. $25–$45). <br />
               Standard lead time: 2–3 weeks. A 50% deposit is required to secure
               your spot in the queue.

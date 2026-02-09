@@ -9,6 +9,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .smooth-scale {
+    @apply transition-transform duration-500 ease-in-out;
+  }
+
+  .smooth-scale-hover {
+    @apply group-hover:scale-105;
+  }
+}
+
+
 body, html {
   overflow-x: hidden;
 }
@@ -57,6 +68,8 @@ body, html {
   --color-btn-shadow: rgba(0, 0, 0, 0.3);
   --color-btn-highlight: rgba(255, 255, 255, 0.3);
   --color-glass-btn-bg: rgba(255, 255, 255, 0.4);
+
+  --color-blue-shadow: 0_0_10px_rgba(59,130,246,0.5);
 
   --color-gray: #0e0e10;
   --color-card-bg: rgba(24, 24, 27, 0.5);
