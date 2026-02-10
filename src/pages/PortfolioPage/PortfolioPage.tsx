@@ -6,8 +6,10 @@ import { usePaginationItems } from "~/hooks/usePaginationItems";
 import { PORTFOLIO_ITEMS } from "~/constants/fullGallery";
 import StatsTicker from "~/components/StatsTicker/StatsTicker";
 import PortfolioCard from "~/components/PotrfolioCard/PortfolioCard";
+import { useScrollTop } from "~/hooks/useScrollTop";
 
 const PortfolioPage = () => {
+  useScrollTop();
   const { scrollYProgress } = useScroll();
   const yText = useTransform(scrollYProgress, [0, 1], [0, -100]);
 

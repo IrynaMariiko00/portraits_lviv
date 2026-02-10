@@ -1,8 +1,10 @@
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
 import { Reveal } from "~/components/ui/Reveal";
 import { TESTIMONIALS } from "~/constants/testimonials";
+import { useScrollTop } from "~/hooks/useScrollTop";
 
 const TestimonialsPage = () => {
+  useScrollTop();
   return (
     <section className="relative min-h-screen px-6 py-36 scroll-smooth">
       <LiquidBackground />
