@@ -1,5 +1,4 @@
-import { attachmentOptions } from "~/constants/attachments";
-import { formData } from "~/constants/formData";
+import { attachmentOptions, formData } from "~/constants/formData";
 
 const ContactForm = () => {
   return (

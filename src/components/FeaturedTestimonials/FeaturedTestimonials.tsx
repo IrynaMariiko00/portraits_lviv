@@ -1,7 +1,7 @@
-import { featuredTestimonials } from "~/constants/featuredTestimonials";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "~/components/ui/Reveal";
 import { Link } from "react-router-dom";
+import { featuredTestimonials } from "~/constants/testimonials";
 
 const FeaturedTestimonials = () => {
   return (

@@ -9,6 +9,7 @@ import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 import PortraitPage from "./pages/PortraitPage/PortraitPage";
 import PricePage from "./pages/PricePage/PricePage";
 import { GlobalModal } from "./components/modals/GlobalModal/GlobalModal";
+import ContactMe from "./pages/ContactMe/ContactMe";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/portfolio/:id" element={<PortraitPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/price" element={<PricePage />} />
+        <Route path="/contact" element={<ContactMe />} />
       </Routes>
       <Footer />
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import type { TextSectionProps } from "~/types/addText";
 
 const ContactMeLink: React.FC<TextSectionProps> = ({ title, description }) => {
@@ -12,7 +13,9 @@ const ContactMeLink: React.FC<TextSectionProps> = ({ title, description }) => {
         ))}
       </h1>
       <h3 className="subtitle mb-[5%] max-w-[60%]">{description}</h3>
-      <button className="blue-btn w-fit">Contact me</button>
+      <Link to="/contact" className="blue-btn w-fit">
+        Contact me
+      </Link>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 @import '~/styles/typography.scss';
 @import '~/styles/fonts.css';
-@import '~/styles/custom-scrollbar.scss';
 @import '~/styles/buttons.scss';
 @import '~/styles/cards.scss';
 @import '~/components/FeaturedWorks/splide.scss';
@@ -23,6 +22,7 @@
 body, html {
   overflow-x: hidden;
 }
+
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -69,6 +69,8 @@ body, html {
   --color-btn-highlight: rgba(255, 255, 255, 0.3);
   --color-glass-btn-bg: rgba(255, 255, 255, 0.4);
 
+  --color-bg-calendar: #181920fc;
+
   --color-blue-shadow: 0_0_10px_rgba(59,130,246,0.5);
 
   --color-gray: #0e0e10;
@@ -97,3 +99,4 @@ input:-webkit-autofill:active {
     background-color: transparent !important;
     caret-color: white;
 }
+

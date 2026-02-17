@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <div className="max-w-[90%] mx-auto py-[92px] flex flex-col gap-[157px]">
+      <div className="max-w-[90%] mx-auto py-[92px] flex flex-col gap-[176px]">
         <Benefits />
         <TextSection
           title={emotions.title}
