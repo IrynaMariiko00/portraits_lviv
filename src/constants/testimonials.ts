@@ -13,3 +13,5 @@ for (let i = 1; i <= 4; i++) {
     portraitImage: `/images/testimonials/portrait_${i}.png`,
   });
 }
+
+export const YEARS: string[] = ["2019", "2024", "2018", "2016"];

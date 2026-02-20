@@ -1,6 +1,6 @@
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
 import { Reveal } from "~/components/ui/Reveal";
-import { TESTIMONIALS } from "~/constants/testimonials";
+import { TESTIMONIALS, YEARS } from "~/constants/testimonials";
 import { useScrollTop } from "~/hooks/useScrollTop";
 
 const TestimonialsPage = () => {
@@ -41,13 +41,13 @@ const TestimonialsPage = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
+              <span className="absolute top-2 right-4 text-8xl font-bold text-white/[0.05] pointer-events-none select-none">
+                {YEARS[index]}
+              </span>
 
               {/* ПРАВА ЧАСТИНА: Контент (Відгук) */}
               <div className="w-full md:w-[60%] p-8 lg:p-12 flex flex-col justify-center gap-6 relative">
                 {/* ВЕЛИКИЙ НОМЕР У КУТІ */}
-                <span className="absolute top-4 right-8 text-8xl font-bold text-white/[0.05] pointer-events-none select-none">
-                  0{index + 1}
-                </span>
 
                 {/* Заголовок всередині */}
                 <div className="space-y-1 relative z-10">

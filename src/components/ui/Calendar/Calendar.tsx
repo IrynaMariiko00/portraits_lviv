@@ -31,7 +31,7 @@ const Calendar = () => {
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute top-[110%] left-0 z-50 p-1 glass-card bg-[var(--color-bg-calendar)]">
+          <div className="absolute top-[110%] left-0 z-50 p-2 glass-card bg-[var(--color-bg-calendar)]">
             <style>{`
 
               .rdp-button_previous .rdp-chevron,
@@ -40,13 +40,7 @@ const Calendar = () => {
                 width: 20px;
               }
               .rdp-caption_label {
-                  font-size: 1rem;
-                  display: inline-flex;
-                  margin-left: 10px; 
-              }
-              
-              rdp-day_button {
-                height: 40px;
+                  font-size: 1rem; 
               }
 
               .rdp-selected .rdp-day_button {
