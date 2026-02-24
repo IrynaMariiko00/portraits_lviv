@@ -3,10 +3,10 @@ import type { Splide as SplideInstance } from "@splidejs/splide";
 import "~/index.css";
 import "@splidejs/react-splide/css";
 import { useState } from "react";
-import { featuredImages } from "~/constants/featuredImages";
 import { Link } from "react-router-dom";
 import { Reveal } from "../ui/Reveal";
 import { ArrowRight } from "lucide-react";
+import { featuredImages } from "~/constants/portraitsImages";
 
 const FeaturedWorks = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,7 +14,7 @@ const FeaturedWorks = () => {
   return (
     <section className="flex flex-col justify-center mx-[auto]">
       <Reveal direction="up" duration={0.8}>
-        <h1 className="title">
+        <h1 className="extra-big leading-none">
           Featured <span className="text-blue">Works</span>
         </h1>
       </Reveal>
@@ -25,10 +25,10 @@ const FeaturedWorks = () => {
         className="flex items-center justify-between"
       >
         <div className="flex flex-col gap-[8px] mb-[48px]">
-          <h3 className="subtitle">
-            Our <span className="text-blue">Best Portraits</span>
+          <h3 className="text text-gray leading-relaxed mt-4">
+            Our Best Portraits
           </h3>
-          <p className="subtitle">
+          <p className="text text-gray leading-relaxed">
             Check out a selection of our most loved portrait works by our
             clients.
           </p>

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { footerSections } from "~/constants/footer";
+import { footerSections } from "~/constants/links";
 
 const Footer = () => {
   return (

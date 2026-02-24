@@ -5,10 +5,10 @@ const ContactMe = () => {
     <section className="flex flex-col justify-center">
       <div className="flex justify-between mx-auto w-[85%]">
         <div className="flex flex-col">
-          <h1 className="title">
+          <h1 className="extra-big leading-none">
             Get in <span className="text-blue">Touch</span>
           </h1>
-          <h3 className="subtitle">
+          <h3 className="text text-gray leading-relaxed">
             Get in touch with me — together we’ll bring your ideas to life
             <br />
             I’m always open to your suggestions and questions

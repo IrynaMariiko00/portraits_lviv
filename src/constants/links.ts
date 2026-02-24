@@ -1,8 +1,16 @@
 import InstagramIcon from "~/assets/icons/InstagramIcon";
 import FacebookIcon from "~/assets/icons/FacebookIcon";
 import YouTubeIcon from "~/assets/icons/YouTubeIcon";
-import { quickLinks } from "~/constants/headerLinks";
-import type { FooterItem, FooterSection } from "~/types/footerItem";
+import type { FooterItem, FooterSection } from "~/types/links";
+
+export const quickLinks = [
+  { title: "Home", link: "/" },
+  { title: "About Me", link: "/about-me" },
+  { title: "Portfolio", link: "/portfolio" },
+  { title: "Testimonials", link: "/testimonials" },
+  { title: "Price", link: "/price" },
+  { title: "FAQ", link: "/faq" },
+];
 
 export const social: FooterItem[] = [
   { title: "Instagram", icon: InstagramIcon, link: "" },

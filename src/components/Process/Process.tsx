@@ -1,5 +1,5 @@
 import CheckIcon from "~/assets/icons/CheckIcon";
-import { smallBenefits } from "~/constants/benefits";
+import { smallBenefits } from "~/constants/addText";
 import { Reveal } from "../ui/Reveal";
 
 const Process = () => {
@@ -7,11 +7,11 @@ const Process = () => {
     <section className="flex flex-col justify-center min-w-[90%] mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-12">
         <div className="flex-1 max-w-lg">
-          <h1 className="title">
-            From Sketch to <span className="title text-blue">Portrait</span>
+          <h1 className="extra-big leading-none">
+            From Sketch to <span className="text-blue">Portrait</span>
           </h1>
 
-          <p className="subtitle">
+          <p className="text text-gray leading-relaxed mt-4">
             Every portrait tells a story. <br /> Here’s how your cherished
             moments come to life on canvas.
           </p>

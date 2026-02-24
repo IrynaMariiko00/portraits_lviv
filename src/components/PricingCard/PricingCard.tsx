@@ -1,4 +1,4 @@
-import { PRICING_DETAILS } from "~/constants/prices";
+import { PRICING_DETAILS } from "~/constants/modals";
 import { useModalStore } from "~/store/useModalsStore";
 import type { PricingCardProps } from "~/types/pricing";
 

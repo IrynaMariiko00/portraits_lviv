@@ -1,15 +1,17 @@
-import { benefits } from "~/constants/benefits";
+import { benefits } from "~/constants/addText";
 import { Reveal } from "~/components/ui/Reveal";
 
 const Benefits = () => {
   return (
     <section className="px-4 py-10">
       <div className="max-w-4xl mx-auto">
-        <Reveal direction="up" className="text-center mb-12">
-          <h1 className="title">
-            Give your memories life <br /> through a{" "}
-            <span className="text-blue">unique portrait</span>
+        <Reveal direction="up" className="mb-12">
+          <h1 className="extra-big leading-none">
+            My <span className="text-blue">Benefits</span>
           </h1>
+          <p className="text text-gray leading-relaxed mt-4">
+            Give your memories life through a unique portrait
+          </p>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

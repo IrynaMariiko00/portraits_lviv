@@ -22,7 +22,6 @@ const Calendar = () => {
         >
           {selected ? format(selected, "PPP") : "Select a date..."}
         </span>
-
         <CalendarIcon />
       </div>
 
@@ -32,7 +31,34 @@ const Calendar = () => {
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute top-[110%] left-0 z-50 p-2 glass-card bg-[var(--color-bg-calendar)]">
+          <div className="absolute top-[110%] left-0 z-50 p-1 glass-card bg-[var(--color-bg-calendar)]">
+            <style>{`
+
+              .rdp-button_previous .rdp-chevron,
+              .rdp-button_next .rdp-chevron {
+                fill: var(--color-blue-text-light);
+                width: 20px;
+              }
+              .rdp-caption_label {
+                  font-size: 1rem;
+                  display: inline-flex;
+                  margin-left: 10px; 
+              }
+              
+              rdp-day_button {
+                height: 40px;
+              }
+
+              .rdp-selected .rdp-day_button {
+                border: 2px solid var(--color-blue-light);
+              }
+              
+              .rdp-today .rdp-day_button {
+                color: var(--color-blue-light);
+                font-weight: bold;
+              }
+
+            `}</style>
             <DayPicker
               mode="single"
               selected={selected}
@@ -40,34 +66,17 @@ const Calendar = () => {
                 setSelected(date);
                 setIsOpen(false);
               }}
-              modifiersStyles={{
-                selected: {
-                  backgroundColor: "var(--color-blue-light)",
-                  color: "white",
-                  borderRadius: "8px",
-                },
-              }}
               styles={{
-                // 2. ЗМЕНШУЄМО ШРИФТИ
-                caption: {
+                caption_label: {
                   fontSize: "0.8rem",
                   fontWeight: "600",
                   color: "white",
-                },
-                head_cell: {
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: "0.6rem",
-                  fontWeight: "normal",
+                  marginBottom: "8px",
                 },
                 day: {
                   fontSize: "0.75rem",
-                  width: "32px", // Зменшуємо ширину клітинки
-                  height: "32px", // Зменшуємо висоту клітинки
-                },
-                nav_button: {
-                  width: "24px",
-                  height: "24px",
-                  color: "white",
+                  width: "32px",
+                  height: "32px",
                 },
               }}
             />

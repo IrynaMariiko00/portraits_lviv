@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Reveal } from "~/components/ui/Reveal";
-import { PORTFOLIO_ITEMS } from "~/constants/fullGallery";
+import { PORTFOLIO_ITEMS } from "~/constants/portraits";
 import { ArrowLeft } from "lucide-react";
 
 const PortraitPage = () => {

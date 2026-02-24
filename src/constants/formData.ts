@@ -19,7 +19,7 @@ export const formData: FormField[] = [
 
 export const formDataPage: FormField[] = [
   {
-    label: { htmlFor: "fullName", text: "Full Name" },
+    label: { htmlFor: "fullName", text: "Full Name*" },
     input: {
       id: "name",
       type: "text",
@@ -28,7 +28,7 @@ export const formDataPage: FormField[] = [
     },
   },
   {
-    label: { htmlFor: "email", text: "Email Address" },
+    label: { htmlFor: "email", text: "Email Address*" },
     input: {
       id: "email",
       type: "email",
@@ -37,7 +37,7 @@ export const formDataPage: FormField[] = [
     },
   },
   {
-    label: { htmlFor: "destination", text: "Shipping Destination" },
+    label: { htmlFor: "destination", text: "Shipping Destination*" },
     input: {
       id: "destination",
       type: "text",
@@ -46,12 +46,24 @@ export const formDataPage: FormField[] = [
     },
   },
   {
-    label: { htmlFor: "alternative-contact", text: "Alternative Contact" },
+    label: { htmlFor: "deadline", text: "Deadline Date*" },
+    input: {
+      id: "deadline",
+      type: "text",
+      placeholder: "dd/mm/yyyy",
+      required: true,
+    },
+  },
+  {
+    label: {
+      htmlFor: "alternative-contact",
+      text: "Alternative Contact (optional)",
+    },
     input: {
       id: "alternative-contact",
       type: "text",
       placeholder: "Instagram, Telegram (specify)",
-      required: true,
+      required: false,
     },
   },
   {
@@ -94,13 +106,48 @@ export const formDataPage: FormField[] = [
       ],
     },
   },
+
   {
-    label: { htmlFor: "deadline", text: "Deadline Date" },
+    label: { htmlFor: "needFrame", text: "Would you like a frame?" },
     input: {
-      id: "deadline",
-      type: "text",
-      placeholder: "dd/mm/yyyy",
+      id: "needFrame",
+      type: "radio",
       required: true,
+      options: [
+        { id: "frame-yes", label: "Yes" },
+        { id: "frame-no", label: "No" },
+      ],
+    },
+  },
+  {
+    label: { htmlFor: "needMat", text: "Should the frame include a mat?" },
+    input: {
+      id: "needMat",
+      type: "radio",
+      required: true,
+      options: [
+        { id: "mat-yes", label: "Yes" },
+        { id: "mat-no", label: "No" },
+      ],
+    },
+  },
+  {
+    label: { htmlFor: "photos", text: "Upload your photos*" },
+    input: {
+      id: "photos",
+      type: "file",
+      required: true,
+      multiple: true,
+      accept: "image/png, image/jpeg",
+    },
+  },
+  {
+    label: { htmlFor: "message", text: "Message (optional)" },
+    input: {
+      id: "message",
+      type: "text",
+      placeholder: "Tell me about your idea...",
+      required: false,
     },
   },
 ];

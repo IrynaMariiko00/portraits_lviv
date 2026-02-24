@@ -1,4 +1,4 @@
-import { ABOUT_ME_CONTENT } from "~/constants/aboutMe";
+import { ABOUT_ME_CONTENT } from "~/constants/addText";
 import mePhoto from "~/assets/images/aboutMe/me.png";
 import { Reveal } from "~/components/ui/Reveal";
 

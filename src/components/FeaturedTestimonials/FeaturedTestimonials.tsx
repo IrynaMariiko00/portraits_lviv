@@ -9,13 +9,13 @@ const FeaturedTestimonials = () => {
       <div className="container mx-auto px-4 md:px-10 flex flex-col md:flex-row justify-between gap-10 items-center">
         <div className="flex flex-col max-w-lg z-10">
           <Reveal direction="up">
-            <h1 className="title">
+            <h1 className="extra-big leading-none">
               What <span className="text-blue">My Clients</span> Say
             </h1>
           </Reveal>
 
           <Reveal direction="up" delay={0.2}>
-            <p className="text mb-10">
+            <p className="text text-gray leading-relaxed mt-4 mb-10">
               My portraits become part of people’s lives. Here’s what my clients
               felt when they saw their stories brought to paper.
             </p>

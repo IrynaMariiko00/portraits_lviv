@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
 import { Reveal } from "~/components/ui/Reveal";
 import { usePaginationItems } from "~/hooks/usePaginationItems";
-import { PORTFOLIO_ITEMS } from "~/constants/fullGallery";
+import { PORTFOLIO_ITEMS } from "~/constants/portraits";
 import StatsTicker from "~/components/StatsTicker/StatsTicker";
 import PortfolioCard from "~/components/PotrfolioCard/PortfolioCard";
 import { useScrollTop } from "~/hooks/useScrollTop";
