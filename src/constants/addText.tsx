@@ -57,6 +57,19 @@ export const contactMeHomePage = {
     "  Not sure which photo to choose or have questions about the process? Let's discuss your perfect portrait",
 };
 
+export const priceEstimatorHomePage = {
+  title: [
+    { text: "Want to", className: "" },
+    {
+      text: "estimate",
+      className: blueShadowClass,
+    },
+    { text: "the price?", className: "" },
+  ],
+  description:
+    "Use the quick online estimator to get an approximate price for your custom portrait in seconds.",
+};
+
 export const ABOUT_ME_CONTENT = {
   TITLE: "About",
   TITLE_ACCENT: "me",

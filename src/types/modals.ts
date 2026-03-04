@@ -10,5 +10,29 @@ export interface BaseModalProps {
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
-  footer: React.ReactNode;
+  confirmButton?: {
+    label: string;
+    to: string;
+  };
+  cancelButtonLabel?: string;
+  footer?: React.ReactNode;
+}
+
+interface ModalButton {
+  label: string;
+  to: string;
+}
+
+interface ModalData {
+  title: string;
+  sections: Section[];
+  confirmButton?: ModalButton;
+  cancelButtonLabel?: string;
+}
+
+export interface ModalState {
+  isOpen: boolean;
+  data: ModalData | null;
+  openModal: (data: ModalData) => void;
+  closeModal: () => void;
 }

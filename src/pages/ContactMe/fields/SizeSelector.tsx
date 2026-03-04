@@ -71,7 +71,7 @@ const SizeSelector = ({ input, label }: FormField) => {
                       </span>
                       <input
                         name="custom_width"
-                        className="bg-transparent border-b border-gray-600 text-[var(--primary-color)] outline-none text-sm p-1 w-full transition-colors"
+                        className="bg-transparent shadow-[0_1px_0_0_rgba(255,255,255,0.2)] text-[var(--primary-color)] outline-none text-sm p-1 w-full transition-colors"
                         placeholder="0"
                         required
                         onClick={(e) => e.stopPropagation()}
@@ -84,7 +84,7 @@ const SizeSelector = ({ input, label }: FormField) => {
                       </span>
                       <input
                         name="custom_height"
-                        className="bg-transparent border-b border-gray-600 text-[var(--primary-color)] outline-none text-sm p-1 w-full transition-colors"
+                        className="bg-transparent shadow-[0_1px_0_0_rgba(255,255,255,0.2)] text-[var(--primary-color)] outline-none text-sm p-1 w-full transition-colors"
                         placeholder="0"
                         required
                         onClick={(e) => e.stopPropagation()}

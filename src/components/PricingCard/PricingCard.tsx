@@ -11,6 +11,10 @@ const PricingCard = ({
     openModal({
       title: PRICING_DETAILS.title,
       sections: PRICING_DETAILS.sections,
+      confirmButton: {
+        label: "Let's go!",
+        to: "/commision",
+      },
     });
   };
 

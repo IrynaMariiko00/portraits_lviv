@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import type { TextSectionProps } from "~/types/addText";
+import { HashLink as Link } from "react-router-hash-link";
 
-const ContactMeLink: React.FC<TextSectionProps> = ({ title, description }) => {
+const ContactMeLink: React.FC<TextSectionProps> = ({
+  title,
+  description,
+  link,
+  button,
+}) => {
   return (
     <section className="flex flex-col justify-center text-center items-center py-[20px]">
       <h1 className="extra-big leading-none">
@@ -15,8 +20,8 @@ const ContactMeLink: React.FC<TextSectionProps> = ({ title, description }) => {
       <h3 className="text text-gray leading-relaxed mt-4 mb-[5%] max-w-[60%]">
         {description}
       </h3>
-      <Link to="/contact" className="blue-btn w-fit">
-        Contact me
+      <Link to={`${link}`} smooth className="blue-btn w-fit">
+        {button}
       </Link>
     </section>
   );

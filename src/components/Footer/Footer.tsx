@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { footerSections } from "~/constants/links";
 
 const Footer = () => {
@@ -26,7 +26,9 @@ const Footer = () => {
                       className="flex flex-row items-center gap-2 cursor-pointer text-[var(--color-primary)] hover:text-[var(--color-blue-text-light)]"
                     >
                       {IconComponent && <IconComponent />}
-                      <NavLink to={item.link}>{item.title}</NavLink>
+                      <Link to={item.link} target="_blank">
+                        {item.title}
+                      </Link>
                     </div>
                   );
                 })}
@@ -36,7 +38,7 @@ const Footer = () => {
         </div>
 
         <p className="small-text text-[var(--color-gray-extra-light)] pb-5">
-          © 2025 PortraitsLviv
+          © 2026 PortraitsLviv
         </p>
       </div>
     </footer>

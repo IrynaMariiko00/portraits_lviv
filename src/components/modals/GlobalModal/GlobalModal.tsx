@@ -8,7 +8,7 @@ export const GlobalModal = () => {
   if (!data) return null;
 
   return (
-    <BaseModal isOpen={isOpen} onClose={closeModal} title={data.title}>
+    <BaseModal isOpen={isOpen} onClose={closeModal} {...data}>
       <ModalSections items={data.sections} />
     </BaseModal>
   );

@@ -13,14 +13,26 @@ export const quickLinks = [
 ];
 
 export const social: FooterItem[] = [
-  { title: "Instagram", icon: InstagramIcon, link: "" },
-  { title: "Facebook", icon: FacebookIcon, link: "" },
-  { title: "YouTube", icon: YouTubeIcon, link: "" },
+  {
+    title: "Instagram",
+    icon: InstagramIcon,
+    link: "https://www.instagram.com/portraits_lviv/",
+  },
+  {
+    title: "Facebook",
+    icon: FacebookIcon,
+    link: "https://www.facebook.com/profile.php?id=100063902521109&locale=uk_UA",
+  },
+  {
+    title: "YouTube",
+    icon: YouTubeIcon,
+    link: "https://www.youtube.com/@portraits_lviv",
+  },
 ];
 
 export const contactInfo: FooterItem[] = [
-  { title: "Telegram", link: "" },
-  { title: "Email", link: "" },
+  { title: "Telegram", link: "https://t.me/IraMariiko" },
+  { title: "Email", link: "mailto:irinamm497@gmail.com" },
 ];
 
 export const footerSections: FooterSection[] = [

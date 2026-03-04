@@ -9,6 +9,7 @@ import type { FieldProps } from "~/types/formField";
 import { useState, type ComponentType } from "react";
 import { formDataPage } from "~/constants/formData";
 import TextArea from "./fields/TextArea";
+import { useScrollTop } from "~/hooks/useScrollTop";
 
 const DatePickerField = ({ label }: FieldProps) => (
   <CustomDatePicker
@@ -32,6 +33,8 @@ const ContactMe = () => {
   };
 
   const FULL_WIDTH_IDS = ["needFrame", "needMat", "size", "photos", "message"];
+  const handleScrollTop = useScrollTop();
+
   return (
     <section
       id="contact-form"
@@ -85,12 +88,14 @@ const ContactMe = () => {
               <button
                 type="reset"
                 className="w-[20%] glass-btn py-3 justify-center uppercase rounded-2xl"
+                onClick={handleScrollTop}
               >
                 Reset
               </button>
               <button
                 type="submit"
                 className="w-[20%] px-1 py-3 blue-btn rounded-2xl"
+                onClick={handleScrollTop}
               >
                 Send Request
               </button>

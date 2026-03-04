@@ -1,10 +1,11 @@
 import CheckIcon from "~/assets/icons/CheckIcon";
 import { smallBenefits } from "~/constants/addText";
 import { Reveal } from "../ui/Reveal";
+import { Link } from "react-router-dom";
 
 const Process = () => {
   return (
-    <section className="flex flex-col justify-center min-w-[90%] mx-auto">
+    <section className="flex flex-col justify-center min-w-[100%] mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-12">
         <div className="flex-1 max-w-lg">
           <h1 className="extra-big leading-none">
@@ -29,7 +30,9 @@ const Process = () => {
           </ul>
 
           <Reveal direction="up" delay={0.6}>
-            <button className="blue-btn h-[auto] w-[200px]">ORDER YOURS</button>
+            <Link to="/commision" className="blue-btn h-[auto] w-[200px]">
+              ORDER YOURS
+            </Link>
           </Reveal>
         </div>
 

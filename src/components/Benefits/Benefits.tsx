@@ -3,7 +3,7 @@ import { Reveal } from "~/components/ui/Reveal";
 
 const Benefits = () => {
   return (
-    <section className="px-4 py-10">
+    <section id="benefits" className="py-10 w-[100%] scroll-mt-[80px]">
       <div className="max-w-4xl mx-auto">
         <Reveal direction="up" className="mb-12">
           <h1 className="extra-big leading-none">

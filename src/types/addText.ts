@@ -6,6 +6,8 @@ interface TextPart {
 export interface TextSectionProps {
   title: TextPart[];
   description: string;
+  link: string;
+  button: string;
 }
 
 export type Benefit = {

@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import ContactForm from "../ContactForm/ContactForm";
 
 const ContactMe = () => {
   return (
-    <section className="flex flex-col justify-center">
-      <div className="flex justify-between mx-auto w-[85%]">
+    <section
+      id="contact"
+      className="flex flex-col justify-center scroll-mt-[80px]"
+    >
+      <div className="flex justify-between mx-auto w-[100%]">
         <div className="flex flex-col">
           <h1 className="extra-big leading-none">
             Get in <span className="text-blue">Touch</span>
@@ -15,7 +19,9 @@ const ContactMe = () => {
           </h3>
         </div>
 
-        <button className="glass-btn h-[5%] self-center">Get Estimate</button>
+        <Link to="/estimate" className="glass-btn h-[5%] self-center">
+          Get Estimate
+        </Link>
       </div>
       <ContactForm />
     </section>

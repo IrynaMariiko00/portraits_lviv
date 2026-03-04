@@ -1,4 +1,4 @@
-import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { Reveal } from "~/components/ui/Reveal";
 
 const Hero = () => {
@@ -25,9 +25,13 @@ const Hero = () => {
         </Reveal>
 
         <Reveal direction="up" delay={0.6}>
-          <button className="blue-btn px-[27px] py-[18px] text-mont text-[22px]">
+          <Link
+            smooth
+            to="#benefits"
+            className="blue-btn px-[27px] py-[18px] text-mont text-[22px]"
+          >
             Get Started
-          </button>
+          </Link>
         </Reveal>
       </div>
     </section>

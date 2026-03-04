@@ -21,6 +21,7 @@
     "react-day-picker": "^9.13.2",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.9.1",
+    "react-router-hash-link": "^2.4.3",
     "tailwind-merge": "^3.4.0",
     "zustand": "^5.0.10"
   },
@@ -29,6 +30,7 @@
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@types/react-router-hash-link": "^2.4.9",
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
     "@vitejs/plugin-react": "^4.6.0",

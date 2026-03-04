@@ -41,9 +41,9 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button className="glass-btn">
-          <span>Get Your Portrait</span>
-        </button>
+        <Link to="/commision" className="glass-btn">
+          Get Your Portrait
+        </Link>
       </div>
     </header>
   );

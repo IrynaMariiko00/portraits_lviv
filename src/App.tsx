@@ -23,7 +23,7 @@ function App() {
         <Route path="/portfolio/:id" element={<PortraitPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/price" element={<PricePage />} />
-        <Route path="/contact" element={<ContactMe />} />
+        <Route path="/commision" element={<ContactMe />} />
       </Routes>
       <Footer />
 

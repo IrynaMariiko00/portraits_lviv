@@ -1,9 +1,18 @@
 import CloseIcon from "~/assets/icons/CloseIcon";
+import { useRedirectWithDelay } from "~/hooks/useRedirectWithDelay";
 import { useScrollLock } from "~/hooks/useScrollLock";
 import type { BaseModalProps } from "~/types/modals";
 
-const BaseModal = ({ isOpen, onClose, title, children }: BaseModalProps) => {
+const BaseModal = ({
+  isOpen,
+  onClose,
+  title,
+  children,
+  confirmButton,
+  cancelButtonLabel = "Close",
+}: BaseModalProps) => {
   useScrollLock(isOpen);
+  const { handleClick } = useRedirectWithDelay(onClose);
 
   if (!isOpen) return null;
 
@@ -35,11 +44,16 @@ const BaseModal = ({ isOpen, onClose, title, children }: BaseModalProps) => {
               onClick={onClose}
               className="glass-btn px-12 h-[45px] rounded-lg uppercase text-sm tracking-widest"
             >
-              Close
+              {cancelButtonLabel}
             </button>
-            <button className="blue-btn px-8 h-[45px] rounded-lg uppercase text-sm tracking-widest">
-              Let's go!
-            </button>
+            {confirmButton && (
+              <button
+                onClick={() => handleClick(confirmButton.to)}
+                className="blue-btn px-8 h-[45px] rounded-lg uppercase text-sm tracking-widest"
+              >
+                {confirmButton?.label}
+              </button>
+            )}
           </div>
         </dialog>
       </div>
