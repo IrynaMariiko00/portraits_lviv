@@ -5,6 +5,7 @@ import { useScrollTop } from "~/hooks/useScrollTop";
 
 const TestimonialsPage = () => {
   useScrollTop();
+
   return (
     <section className="relative min-h-screen px-6 py-36 scroll-smooth">
       <LiquidBackground />
@@ -27,35 +28,53 @@ const TestimonialsPage = () => {
         </Reveal>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col gap-44">
-        {TESTIMONIALS.map((item, index) => {
-          const isEven = index % 2 !== 0;
-
-          return (
-            <div
-              key={item.id}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${isEven ? "lg:direction-rtl" : ""}`}
-            >
-              <div className={`${isEven ? "lg:order-2" : ""}`}>
-                <Reveal direction={isEven ? "right" : "left"} delay={0.3}>
-                  <div className="glass-card group overflow-hidden rounded-2xl p-6 z-10 flex items-center">
-                    <img
-                      src={item.portraitImage}
-                      alt="Portrait"
-                      className="rounded-2xl shadow-2xl max-h-[420px] w-min object-contain zoom-image transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                </Reveal>
+      {/* Horizontal Cards List */}
+      <div className="max-w-5xl mx-auto flex flex-col gap-12">
+        {TESTIMONIALS.map((item, index) => (
+          <Reveal key={item.id} direction="up" delay={index * 0.1}>
+            <div className="glass-card group flex flex-col md:flex-row items-stretch overflow-hidden rounded-3xl min-h-[400px] relative">
+              {/* ЛІВА ЧАСТИНА: Фото (Портрет) */}
+              <div className="w-full md:w-[40%] overflow-hidden relative">
+                <img
+                  src={item.portraitImage}
+                  alt="Portrait"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
 
-              <img
-                src={item.testimonialImage}
-                alt="Testimonial"
-                className="z-10"
-              />
+              {/* ПРАВА ЧАСТИНА: Контент (Відгук) */}
+              <div className="w-full md:w-[60%] p-8 lg:p-12 flex flex-col justify-center gap-6 relative">
+                {/* ВЕЛИКИЙ НОМЕР У КУТІ */}
+                <span className="absolute top-4 right-8 text-8xl font-bold text-white/[0.05] pointer-events-none select-none">
+                  0{index + 1}
+                </span>
+
+                {/* Заголовок всередині */}
+                <div className="space-y-1 relative z-10">
+                  <h3 className="text-xl font-light text-white tracking-wide uppercase">
+                    Customer Story
+                  </h3>
+                  <div className="h-[1px] w-12 bg-blue/50" />
+                </div>
+
+                <div className="flex items-center relative z-10">
+                  <img
+                    src={item.testimonialImage}
+                    alt="Testimonial text"
+                    className="max-w-full h-auto brightness-110 contrast-[1.02] drop-shadow-sm opacity-90 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+
+                {/* Лапка внизу */}
+                <div className="absolute bottom-6 right-8 opacity-20 hidden md:block">
+                  <span className="text-4xl font-serif italic text-blue">
+                    "
+                  </span>
+                </div>
+              </div>
             </div>
-          );
-        })}
+          </Reveal>
+        ))}
       </div>
     </section>
   );

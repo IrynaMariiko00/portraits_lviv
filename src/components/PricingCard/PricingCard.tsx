@@ -50,7 +50,7 @@ const PricingCard = ({
         </div>
         <div className="group relative">
           <button
-            className="underline font-extralight text text-gray Shipping is calculated separately (approx. $ absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-[20%] transition-all opacity-0 first-line:duration-700 group-hover:opacity-100 group-hover:translate-y-0"
+            className="underline font-extralight text text-gray absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-[20%]"
             onClick={handleDetails}
           >
             More details

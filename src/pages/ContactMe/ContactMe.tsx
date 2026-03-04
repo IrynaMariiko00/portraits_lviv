@@ -36,7 +36,7 @@ const ContactMe = () => {
   const handleScrollTop = useScrollTop();
 
   return (
-    <section
+    <main
       id="contact-form"
       className="relative min-h-screen py-24 px-6 overflow-hidden"
     >
@@ -103,7 +103,7 @@ const ContactMe = () => {
           </form>
         </Reveal>
       </div>
-    </section>
+    </main>
   );
 };
 

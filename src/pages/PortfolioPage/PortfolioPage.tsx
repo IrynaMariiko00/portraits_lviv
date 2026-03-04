@@ -1,5 +1,3 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
 import { Reveal } from "~/components/ui/Reveal";
 import { usePaginationItems } from "~/hooks/usePaginationItems";
@@ -10,9 +8,6 @@ import { useScrollTop } from "~/hooks/useScrollTop";
 
 const PortfolioPage = () => {
   useScrollTop();
-  const { scrollYProgress } = useScroll();
-  const yText = useTransform(scrollYProgress, [0, 1], [0, -100]);
-
   const { visibleItems, showMoreItems, hasMore } = usePaginationItems({
     items: PORTFOLIO_ITEMS,
     initialCount: 6,
@@ -35,10 +30,6 @@ const PortfolioPage = () => {
               in graphite and charcoal.
             </p>
           </Reveal>
-
-          <motion.div style={{ y: yText }} className="hidden md:block">
-            <ArrowUpRight className="w-24 h-24 text-[var(--color-btn-highlight)]" />
-          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">

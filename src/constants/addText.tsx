@@ -75,8 +75,6 @@ export const ABOUT_ME_CONTENT = {
   TITLE_ACCENT: "me",
   GREETING: "Hello! My name is",
   NAME: "Iryna",
-  QUOTE:
-    "My goal is to capture the soul behind the eyes, turning a simple photograph into a timeless piece of art.",
   BUTTON_TEXT: "CONTACT ME",
 
   PARAGRAPHS: [
