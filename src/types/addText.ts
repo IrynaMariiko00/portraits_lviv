@@ -23,6 +23,8 @@ export type FAQItemProps = {
 
 export interface Testimonial {
   id: number;
+  year: string;
+  title: string;
   testimonialImage: string;
   portraitImage: string;
 }

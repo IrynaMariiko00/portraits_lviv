@@ -2,6 +2,7 @@ import { ABOUT_ME_CONTENT } from "~/constants/addText";
 import mePhoto from "~/assets/images/aboutMe/me.png";
 import { Reveal } from "~/components/ui/Reveal";
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
+import { Link } from "react-router-dom";
 
 const AboutMePage = () => {
   const { TITLE, TITLE_ACCENT, GREETING, NAME, PARAGRAPHS, BUTTON_TEXT } =
@@ -63,12 +64,12 @@ const AboutMePage = () => {
             </div>
 
             <Reveal direction="up" delay={1} className="mt-12">
-              <a
-                href="/#contact"
-                className="blue-btn inline-block text-center px-12 py-4 rounded-xl"
+              <Link
+                to="/#contact"
+                className="blue-btn inline-block text-center px-12 py-4"
               >
                 {BUTTON_TEXT}
-              </a>
+              </Link>
             </Reveal>
           </div>
         </div>

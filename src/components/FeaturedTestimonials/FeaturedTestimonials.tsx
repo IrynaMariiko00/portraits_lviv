@@ -41,6 +41,7 @@ const FeaturedTestimonials = () => {
                 <div className="glass-card min-h-[255px] relative">
                   <img
                     src={item}
+                    loading="lazy"
                     alt={`Testimonial ${index + 1}`}
                     className="max-w-full max-h-full rounded-lg object-contain opacity-90 hover:opacity-100 transition-opacity"
                   />

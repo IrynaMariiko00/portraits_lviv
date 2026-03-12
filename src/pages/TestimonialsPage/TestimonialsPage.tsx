@@ -1,6 +1,8 @@
+import ContactMeLink from "~/components/ContactMeLink/ContactMeLink";
 import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground";
 import { Reveal } from "~/components/ui/Reveal";
-import { TESTIMONIALS, YEARS } from "~/constants/testimonials";
+import { contactMeTestimonialsPage } from "~/constants/addText";
+import { TESTIMONIALS } from "~/constants/testimonials";
 import { useScrollTop } from "~/hooks/useScrollTop";
 
 const TestimonialsPage = () => {
@@ -28,31 +30,25 @@ const TestimonialsPage = () => {
         </Reveal>
       </div>
 
-      {/* Horizontal Cards List */}
       <div className="max-w-5xl mx-auto flex flex-col gap-12">
         {TESTIMONIALS.map((item, index) => (
           <Reveal key={item.id} direction="up" delay={index * 0.1}>
             <div className="glass-card group flex flex-col md:flex-row items-stretch overflow-hidden rounded-3xl min-h-[400px] relative">
-              {/* ЛІВА ЧАСТИНА: Фото (Портрет) */}
-              <div className="w-full md:w-[40%] overflow-hidden relative">
+              <div className="w-full md:w-[40%] overflow-hidden rounded-2xl relative">
                 <img
                   src={item.portraitImage}
                   alt="Portrait"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <span className="absolute top-2 right-4 text-8xl font-bold text-white/[0.05] pointer-events-none select-none">
-                {YEARS[index]}
+              <span className="absolute top-2 right-4 text-8xl font-bold text-[var(--color-border)] pointer-events-none select-none">
+                {item.year}
               </span>
 
-              {/* ПРАВА ЧАСТИНА: Контент (Відгук) */}
               <div className="w-full md:w-[60%] p-8 lg:p-12 flex flex-col justify-center gap-6 relative">
-                {/* ВЕЛИКИЙ НОМЕР У КУТІ */}
-
-                {/* Заголовок всередині */}
-                <div className="space-y-1 relative z-10">
-                  <h3 className="text-xl font-light text-white tracking-wide uppercase">
-                    Customer Story
+                <div className="space-y-1 ml-4 relative z-10">
+                  <h3 className="text-xl font-light text text-gray tracking-wide uppercase">
+                    {item.title}
                   </h3>
                   <div className="h-[1px] w-12 bg-blue/50" />
                 </div>
@@ -64,17 +60,19 @@ const TestimonialsPage = () => {
                     className="max-w-full h-auto brightness-110 contrast-[1.02] drop-shadow-sm opacity-90 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
-
-                {/* Лапка внизу */}
-                <div className="absolute bottom-6 right-8 opacity-20 hidden md:block">
-                  <span className="text-4xl font-serif italic text-blue">
-                    "
-                  </span>
-                </div>
               </div>
             </div>
           </Reveal>
         ))}
+      </div>
+
+      <div className="mt-36">
+        <ContactMeLink
+          title={contactMeTestimonialsPage.title}
+          description={contactMeTestimonialsPage.description}
+          link="/commision"
+          button="Contact me"
+        />
       </div>
     </section>
   );

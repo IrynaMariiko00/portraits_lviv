@@ -63,6 +63,7 @@ const FeaturedWorks = () => {
             >
               <img
                 src={img}
+                loading="lazy"
                 alt={`Image ${i + 1}`}
                 className="w-96 h-[496px] object-cover rounded-xl"
               />

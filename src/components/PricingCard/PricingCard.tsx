@@ -48,12 +48,12 @@ const PricingCard = ({
             </div>
           ))}
         </div>
-        <div className="group relative">
+        <div className="group relative flex justify-center">
           <button
-            className="underline font-extralight text text-gray absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-[20%]"
+            className="glass-btn py-3 px-6 text-[1rem] mb-6"
             onClick={handleDetails}
           >
-            More details
+            Order Portrait
           </button>
         </div>
       </div>

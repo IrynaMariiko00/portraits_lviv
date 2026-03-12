@@ -8,8 +8,23 @@ import { contactMeHomePage, priceEstimatorHomePage } from "~/constants/addText";
 import ContactMeLink from "~/components/ContactMeLink/ContactMeLink";
 import ContactMe from "~/components/ContactMe/ContactMe";
 import Comparison from "~/components/Comparison/Comparison";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace("#", ""));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [hash]);
+
   return (
     <>
       <Hero />

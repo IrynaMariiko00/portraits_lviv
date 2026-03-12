@@ -2,9 +2,11 @@ import LiquidBackground from "~/components/ui/LiquidBackground/LiquidBackground"
 import { Reveal } from "~/components/ui/Reveal";
 import { usePaginationItems } from "~/hooks/usePaginationItems";
 import { PORTFOLIO_ITEMS } from "~/constants/portraits";
-import StatsTicker from "~/components/StatsTicker/StatsTicker";
 import PortfolioCard from "~/components/PotrfolioCard/PortfolioCard";
 import { useScrollTop } from "~/hooks/useScrollTop";
+import { PortfolioCTACard } from "~/components/PortfolioCTACard";
+import ContactMeLink from "~/components/ContactMeLink/ContactMeLink";
+import { contactMePortfolioPage } from "~/constants/addText";
 
 const PortfolioPage = () => {
   useScrollTop();
@@ -15,7 +17,7 @@ const PortfolioPage = () => {
   });
 
   return (
-    <section className="relative min-h-screen py-24 px-6 overflow-hidden">
+    <section className="relative min-h-screen pt-24 pb-12 px-6 overflow-hidden">
       <LiquidBackground />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -40,20 +42,31 @@ const PortfolioPage = () => {
               delay={idx * 0.1}
               className={`${item.size === "large" ? "md:row-span-2" : ""}`}
             >
-              <PortfolioCard item={item} />
+              {item.id === 4 ? (
+                <PortfolioCTACard />
+              ) : (
+                <PortfolioCard item={item} />
+              )}
             </Reveal>
           ))}
         </div>
 
-        {hasMore && (
+        {hasMore ? (
           <div className="flex justify-center my-10">
             <button className="glass-btn" onClick={showMoreItems}>
               See More ↓
             </button>
           </div>
+        ) : (
+          <div className="mb-24 mt-36">
+            <ContactMeLink
+              title={contactMePortfolioPage.title}
+              description={contactMePortfolioPage.description}
+              link="/commision"
+              button="Contact me"
+            />
+          </div>
         )}
-
-        <StatsTicker />
       </div>
     </section>
   );

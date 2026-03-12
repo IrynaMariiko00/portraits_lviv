@@ -10,6 +10,7 @@ import PortraitPage from "./pages/PortraitPage/PortraitPage";
 import PricePage from "./pages/PricePage/PricePage";
 import { GlobalModal } from "./components/modals/GlobalModal/GlobalModal";
 import ContactMe from "./pages/ContactMe/ContactMe";
+import FAQPage from "./pages/FAQPage/FAQPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/price" element={<PricePage />} />
         <Route path="/commision" element={<ContactMe />} />
+        <Route path="/faq" element={<FAQPage />} />
       </Routes>
       <Footer />
 

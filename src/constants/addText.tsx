@@ -57,6 +57,32 @@ export const contactMeHomePage = {
     "  Not sure which photo to choose or have questions about the process? Let's discuss your perfect portrait",
 };
 
+export const contactMePortfolioPage = {
+  title: [
+    { text: "Ready to", className: "" },
+    {
+      text: "capture",
+      className: blueShadowClass,
+    },
+    { text: "your story?", className: "" },
+  ],
+  description:
+    "Transform your favorite memories into timeless art. Whether it's a gift or a keepsake, let's discuss how to bring your vision to life on paper.",
+};
+
+export const contactMeTestimonialsPage = {
+  title: [
+    { text: "Ready to feel", className: "" },
+    {
+      text: "the same",
+      className: blueShadowClass,
+    },
+    { text: "joy?", className: "" },
+  ],
+  description:
+    "Every portrait is a journey of emotion. Join the list of people who have captured their most precious moments on paper.",
+};
+
 export const priceEstimatorHomePage = {
   title: [
     { text: "Want to", className: "" },

@@ -26,14 +26,13 @@ const Comparison = () => {
         <div className="lg:col-span-7 w-full">
           <Reveal direction="right" duration={1}>
             <div className="relative group rounded-2xl overflow-hidden border border-[var(--color-border-dark)] shadow-2xl leading-[0]">
-              {/* Мітки "Before" / "After" */}
               <div className="absolute top-4 left-4 z-10 pointer-events-none">
-                <span className="bg-black/40 backdrop-blur-md text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border border-white/10">
+                <span className="bg-black/40 backdrop-blur-md text-[var(--primary-color)] text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
                   Original
                 </span>
               </div>
               <div className="absolute top-4 right-4 z-10 pointer-events-none">
-                <span className="bg-blue/60 backdrop-blur-md text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border border-white/10">
+                <span className="bg-blue/60 backdrop-blur-md text-[var(--primary-color)] text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
                   Hand-drawn
                 </span>
               </div>
@@ -43,12 +42,14 @@ const Comparison = () => {
                   slot="first"
                   src="/images/comparison/img_1-before.jpg"
                   alt="Before"
+                  loading="lazy"
                   className="w-full"
                 />
                 <img
                   slot="second"
                   src="/images/comparison/img_1-after.jpg"
                   alt="After"
+                  loading="lazy"
                   className="w-full"
                 />
                 {/* @ts-expect-error: Web component definition is missing in JSX types */}
